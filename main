@@ -1,0 +1,43 @@
+#include "Toll.h"
+#include "KontoAufgaben.h"
+
+int Option;
+
+int main()
+{
+	SetConsoleTitle("Bankautomat");
+	Auslesen();
+	cout << "###################" << endl;
+	cout << "##  Version 1.0  ##" << endl;
+	cout << "###################" << endl;
+	cout << "##    Optionen   ##" << endl;
+	cout << "###################" << endl;
+	cout << "## 1: Einzahlen  ##" << endl;
+	cout << "## 2: Auszahlen  ##" << endl;
+	cout << "## 3: Beenden    ##" << endl;
+	cout << "###################" << endl;
+	cout << "##Ihr Kontostand ##" << endl;
+	cout << Kontozahlen;
+	cout << "" << endl;
+	cout << "" << endl;
+	cout << "Bitte waehlen Sie eine Option: " << endl;
+	//Wählen der Option
+	cin >> Option;
+	//If-Abfrage -> Option
+	if (Option == 1)
+	{
+		Einzahlen();
+	}
+	else if (Option == 2)
+	{
+		Auszahlen();
+	}
+	else if (Option == 3)
+	{
+		exit;
+	}
+	else
+	{
+		cout << "Bitte wählen Sie eine Option, die oben gelistet ist! \n" << endl;
+	}
+}
